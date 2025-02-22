@@ -1,11 +1,19 @@
 <template>
   <div class="diagnosis-container">
     <header class="welcome-header">
-      <h1>欢迎来到医疗诊断平台</h1>
+      <h1>Group18全体医护人员为您提供全套服务</h1>
     </header>
     
+    <div class="doctors-section">
+      <button class="doctor-btn btn-blue">Dr.Zheng</button>
+      <button class="doctor-btn btn-green">Dr.Chen</button>
+      <button class="doctor-btn btn-purple">Dr.Mai</button>
+      <button class="doctor-btn btn-orange">Dr.Tian</button>
+      <button class="doctor-btn btn-red">Dr.Liu</button>
+    </div>
+
     <div class="upload-section">
-      <h2>CT图像上传</h2>
+      <h2>肺部CT图像上传</h2>
       <div 
         class="upload-box"
         @drop.prevent="handleDrop"
@@ -84,7 +92,7 @@ export default {
 
 .welcome-header {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 15px;
   background: linear-gradient(45deg, #2196F3, #00BCD4);
   padding: 20px;
   border-radius: 10px;
@@ -97,6 +105,38 @@ export default {
   margin: 0;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
+
+.doctors-section {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  padding: 0 20px;
+}
+
+.doctor-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.doctor-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-blue { background-color: #2196F3; }
+.btn-green { background-color: #4CAF50; }
+.btn-purple { background-color: #9C27B0; }
+.btn-orange { background-color: #FF9800; }
+.btn-red { background-color: #f44336; }
 
 .upload-section {
   margin-bottom: 30px;
