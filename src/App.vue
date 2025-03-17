@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import DiagnosisPage from './components/DiagnosisPage.vue'
+import DiagnosisPage from './views/DiagnosisPage.vue'
 
 export default {
   name: 'App',
