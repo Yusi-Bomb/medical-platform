@@ -22,6 +22,12 @@
       <p class="confidence-text">
         置信度：{{ diagnosisResult.confidence }}
       </p>
+      <p v-if="diagnosisResult.result === '肺炎'" class="medical-warning">
+        初步检查为肺炎，请及时去医院就医！
+      </p>
+      <p v-if="diagnosisResult.result === '正常'" class="normal-notice">
+        初步检查正常，若有不适及时去医院就医！
+      </p>
     </div>
 
     <button 
@@ -162,5 +168,25 @@ export default {
 .confidence-text {
   color: #1976D2;
   font-size: 1.1em;
+}
+
+.medical-warning {
+  color: #f44336;
+  font-weight: bold;
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #ffebee;
+  border-radius: 4px;
+  border-left: 4px solid #f44336;
+}
+
+.normal-notice {
+  color: #388e3c;
+  font-weight: bold;
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #e8f5e9;
+  border-radius: 4px;
+  border-left: 4px solid #388e3c;
 }
 </style> 
